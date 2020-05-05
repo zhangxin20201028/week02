@@ -1,7 +1,5 @@
 package com.zhangxin.common.utils;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class RandomUtilTest {
@@ -9,13 +7,16 @@ public class RandomUtilTest {
 	@Test
 	public void testRandom() {
 		for (int i = 0; i < 10; i++) {
-			System.out.println(RandomUtil.random(1, 30));
+			System.out.println(RandomUtil.random(1, 130));
 		}
+	
+		
+		
 	}
 
 	@Test
 	public void testSubRandom() {
-		int[] is = RandomUtil.subRandom(1, 20,5);
+		int[] is = RandomUtil.subRandom(1, 10, 3);
 		for (int i : is) {
 			System.out.println(i);
 		}
@@ -23,14 +24,14 @@ public class RandomUtilTest {
 
 	@Test
 	public void testRandomCharacter() {
-		char charr = RandomUtil.randomCharacter();
-		System.out.println(charr);
+		char c = RandomUtil.randomCharacter();
+		System.out.println(c);
 	}
 
 	@Test
 	public void testRandomString() {
-		String str = RandomUtil.randomString(5);
-		System.out.println(str);
+		String string = RandomUtil.randomString(4);
+		System.out.println(string);
 	}
 
 }
